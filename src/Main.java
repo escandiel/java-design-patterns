@@ -1,6 +1,6 @@
-import santander.dio.SingletonEager;
-import santander.dio.SingletonLazy;
-import santander.dio.SingletonLazyHolder;
+import santander.dio.Singleton.SingletonEager;
+import santander.dio.Singleton.SingletonLazy;
+import santander.dio.Singleton.SingletonLazyHolder;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.

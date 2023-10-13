@@ -1,4 +1,4 @@
-package santander.dio;
+package santander.dio.Singleton;
 
 /*Singleton Apressado */
 public class SingletonEager {

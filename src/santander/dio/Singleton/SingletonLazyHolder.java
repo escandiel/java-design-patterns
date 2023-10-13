@@ -1,4 +1,4 @@
-package santander.dio;
+package santander.dio.Singleton;
 
 public class SingletonLazyHolder {
     private static class InstanceHolder {
