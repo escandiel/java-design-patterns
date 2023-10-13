@@ -2,8 +2,6 @@ import santander.dio.Singleton.SingletonEager;
 import santander.dio.Singleton.SingletonLazy;
 import santander.dio.Singleton.SingletonLazyHolder;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
         SingletonLazy lazy = SingletonLazy.getInstancia();
