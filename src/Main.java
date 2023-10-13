@@ -2,6 +2,10 @@ import santander.dio.FactoryMethod.Factory;
 import santander.dio.FactoryMethod.FactoryProdutoA;
 import santander.dio.FactoryMethod.FactoryProdutoB;
 import santander.dio.FactoryMethod.Produto;
+import santander.dio.Observer.Observer;
+import santander.dio.Observer.ObserverConcretoA;
+import santander.dio.Observer.ObserverConcretoB;
+import santander.dio.Observer.Sujeito;
 import santander.dio.Singleton.SingletonEager;
 import santander.dio.Singleton.SingletonLazy;
 import santander.dio.Singleton.SingletonLazyHolder;
@@ -58,6 +62,28 @@ public class Main {
         Factory factoryB = new FactoryProdutoB();
         Produto produtoB = factoryB.criarProduto();
         produtoB.criar();
+
+
+        //Observer
+        Sujeito sujeito = new Sujeito();
+
+        // Crie instâncias dos observadores
+        Observer observadorA = new ObserverConcretoA();
+        Observer observadorB = new ObserverConcretoB();
+
+        // Registre os observadores no sujeito
+        sujeito.adicionarObservador(observadorA);
+        sujeito.adicionarObservador(observadorB);
+
+        // Notifique os observadores com uma mensagem
+        sujeito.notificarObservadores("Uma mensagem importante foi recebida!");
+
+        // Remova um observador (opcional)
+        sujeito.removerObservador(observadorA);
+
+        // Notifique novamente após remover o observador
+        sujeito.notificarObservadores("Outra mensagem importante foi recebida!");
+
 
     }
 }
