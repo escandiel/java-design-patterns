@@ -1,8 +1,12 @@
+import santander.dio.FactoryMethod.Factory;
+import santander.dio.FactoryMethod.FactoryProdutoA;
+import santander.dio.FactoryMethod.FactoryProdutoB;
+import santander.dio.FactoryMethod.Produto;
 import santander.dio.Singleton.SingletonEager;
 import santander.dio.Singleton.SingletonLazy;
 import santander.dio.Singleton.SingletonLazyHolder;
 import santander.dio.Strategy.*;
-import santander.dio.facade.Facade;
+import santander.dio.Facade.Facade;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +49,15 @@ public class Main {
         Facade facade = new Facade();
         facade.migrarCliente("Escandi", "998998");
 
+        //FactoryMethod
+
+        Factory factoryA = new FactoryProdutoA();
+        Produto produtoA = factoryA.criarProduto();
+        produtoA.criar();
+
+        Factory factoryB = new FactoryProdutoB();
+        Produto produtoB = factoryB.criarProduto();
+        produtoB.criar();
 
     }
 }
